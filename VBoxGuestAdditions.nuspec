@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>VBoxGuestAdditions.install</id>
+    <version>4.3.18</version>
+    <title>VirtualBox Guest Additions (Install)</title>
+    <authors>Oracle</authors>
+    <owners>JMonsorno</owners>
+    <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
+    <projectUrl>http://www.virtualbox.org/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The Guest Additions are designed to be installed inside a virtual machine after the guest operating system has been installed. They consist of device drivers and system applications that optimize the guest operating system for better performance and usability.</description>
+    <releaseNotes />
+    <copyright />
+    <tags>virtualbox virtualization guest vm</tags>
+    <dependencies>
+      <dependency id="7zip.install" />
+    </dependencies>
+  </metadata>
+</package>
