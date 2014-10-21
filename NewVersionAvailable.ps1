@@ -32,5 +32,6 @@ if ($currentVersion -lt $maxVersion)
     $nuspecPath = Resolve-Path $nuspecPath
     $nuspec.Save($nuspecPath)
     #iex "choco pack"
+    Write-Output $version
 }
 Pop-Location
