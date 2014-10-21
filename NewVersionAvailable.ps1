@@ -22,7 +22,7 @@ $powershell[1] -match "\d+\.\d+\.\d+" | Out-Null
 if ($currentVersion -lt $maxVersion)
 {
     $version = $maxVersion.ToString()
-    Send-MailMessage -To $AlertRecipient -Subject "Chocolatey-VBoxGuestAdditions" -Body "An Updated Version is available" -From $Credentials.UserName -SmtpServer smtp.mandrillapp.com -Port 587 -Credential $Credentials
+    Send-MailMessage -To $AlertRecipient -Subject "Chocolatey-VBoxGuestAdditions" -Body "Version $version is available" -From $Credentials.UserName -SmtpServer smtp.mandrillapp.com -Port 587 -Credential $Credentials
     $powershell[1] = "`$url = 'http://download.virtualbox.org/virtualbox/$version/VBoxGuestAdditions_$version.iso'"
     Set-Content -Path .\tools\chocolateyInstall.ps1 -Value $powershell
     [xml]$nuspec = Get-Content -Raw .\VBoxGuestAdditions.nuspec
