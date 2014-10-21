@@ -31,6 +31,6 @@ if ($currentVersion -lt $maxVersion)
     New-Item $nuspecPath -Force -ItemType File | Out-Null
     $nuspecPath = Resolve-Path $nuspecPath
     $nuspec.Save($nuspecPath)
-    iex "choco pack"
+    #iex "choco pack"
 }
 Pop-Location
