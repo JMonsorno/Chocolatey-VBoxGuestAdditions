@@ -1,6 +1,6 @@
 ﻿Param(
     [string]$AlertRecipient,
-    [System.Net.NetworkCredential]$Credentials
+    [PSCredential]$Credentials
 )
 
 Push-Location
