@@ -1,5 +1,5 @@
 $packageName = 'VBoxGuestAdditions.install' 
-$url = 'http://download.virtualbox.org/virtualbox/4.3.22/VBoxGuestAdditions_4.3.22.iso'
+$url = 'http://download.virtualbox.org/virtualbox/4.3.24/VBoxGuestAdditions_4.3.24.iso'
 
 $unzip = Join-Path $env:TEMP VBoxGuestAdditions
 New-Item -Path $unzip -ItemType Directory -Force | Out-Null
