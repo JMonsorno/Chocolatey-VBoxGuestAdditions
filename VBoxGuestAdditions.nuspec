@@ -8,6 +8,7 @@
     <owners>JMonsorno</owners>
     <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://www.virtualbox.org/</projectUrl>
+	<iconUrl>https://cdn.rawgit.com/JMonsorno/Chocolatey-VBoxGuestAdditions/6da62a2f1de260c6fb3b64943a1513ed9dc1a795/icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>The Guest Additions are designed to be installed inside a virtual machine after the guest operating system has been installed. They consist of device drivers and system applications that optimize the guest operating system for better performance and usability.</description>
     <releaseNotes />
