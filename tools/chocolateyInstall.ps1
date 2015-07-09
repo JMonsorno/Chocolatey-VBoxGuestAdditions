@@ -21,4 +21,5 @@ Push-Location
 Set-Location .\cert
 .\VBoxCertUtil.exe add-trusted-publisher .\oracle-vbox.cer >$null 2>&1
 Pop-Location
-Install-ChocolateyInstallPackage -packageName $packageName -silentArgs '/S' -file 'VBoxWindowsAdditions.exe'
+$filename = $(Get-ChildItem .\VBoxWindowsAdditions.exe).FullName
+Install-ChocolateyInstallPackage -packageName $packageName -silentArgs '/S' -file $filename
