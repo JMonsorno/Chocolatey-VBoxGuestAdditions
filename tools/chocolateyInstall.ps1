@@ -1,5 +1,5 @@
 $packageName = 'VBoxGuestAdditions.install' 
-$url = 'http://download.virtualbox.org/virtualbox/4.3.18/VBoxGuestAdditions_4.3.18.iso'
+$url = 'http://download.virtualbox.org/virtualbox/4.3.26/VBoxGuestAdditions_4.3.26.iso'
 
 $unzip = Join-Path $env:TEMP VBoxGuestAdditions
 New-Item -Path $unzip -ItemType Directory -Force | Out-Null
@@ -21,4 +21,5 @@ Push-Location
 Set-Location .\cert
 .\VBoxCertUtil.exe add-trusted-publisher .\oracle-vbox.cer >$null 2>&1
 Pop-Location
-Install-ChocolateyInstallPackage -packageName $packageName -silentArgs '/S' -file 'VBoxWindowsAdditions.exe'
+$filename = $(Get-ChildItem .\VBoxWindowsAdditions.exe).FullName
+Install-ChocolateyInstallPackage -packageName $packageName -silentArgs '/S' -file $filename
