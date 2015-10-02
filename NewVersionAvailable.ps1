@@ -23,6 +23,10 @@ $powershell[1] -match "\d+\.\d+\.\d+" | Out-Null
 
 if ($currentVersion -lt $maxVersion)
 {
+    #Explicit upgrade of chocolately
+    rm C:\ProgramData\chocolatey -Recurse -Force -ErrorAction SilentlyContinue
+    iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
+
     $version = $($versions |? {$_ -gt $currentVersion}  | Measure-Object -Minimum).Minimum.ToString()
     Send-MailMessage -To $AlertRecipient -Subject "Chocolatey-VBoxGuestAdditions" -Body "Version $version is available" -From $Credentials.UserName -SmtpServer smtp.mandrillapp.com -Port 587 -Credential $Credentials
     $powershell[1] = "`$url = 'http://download.virtualbox.org/virtualbox/$version/VBoxGuestAdditions_$version.iso'"
