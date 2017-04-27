@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>VBoxGuestAdditions.install</id>
-    <version>5.1.12</version>
+    <version>5.1.20</version>
     <title>VirtualBox Guest Additions (Install)</title>
     <authors>Oracle</authors>
     <owners>JMonsorno</owners>
