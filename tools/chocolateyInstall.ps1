@@ -1,5 +1,5 @@
 $packageName = 'VBoxGuestAdditions.install'
-$url = 'http://download.virtualbox.org/virtualbox/5.1.12/VBoxGuestAdditions_5.1.12.iso'
+$url = 'http://download.virtualbox.org/virtualbox/5.1.20/VBoxGuestAdditions_5.1.20.iso'
 
 $unzip = Join-Path $env:TEMP VBoxGuestAdditions
 $certPath = Join-Path $unzip "cert"
